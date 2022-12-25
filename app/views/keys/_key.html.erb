@@ -1,0 +1,27 @@
+<div id="<%= dom_id key %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Code:</strong>
+    <%= key.code %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Description:</strong>
+    <%= key.description %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Status:</strong>
+    <%= key.status %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Table:</strong>
+    <%= key.table_id %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this key", key, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this key', edit_key_path(key), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

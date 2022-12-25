@@ -1,0 +1,7 @@
+ <div id="<%= dom_id table %>">
+    <%= link_to table.name, table, class: "p-4 inline-block font-medium" %>:
+    <%= table.description %>
+
+    <%= link_to 'Edit', edit_table_path(table), class: "py-3 ml-2 px-5 inline-block" %>
+    <hr class="mt-3">
+</div>

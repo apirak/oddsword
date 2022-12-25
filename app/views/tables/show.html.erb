@@ -1,0 +1,31 @@
+<div class="ml-4">
+  <%= link_to '< All tables', tables_path, class: "p-4 inline-block" %>
+
+  <% if notice.present? %>
+    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+  <% end %>
+
+  <% #render :partial => "key", key: @table.keys.first %>
+
+  <% # render @table.keys %>
+
+  <% # @table.keys.first.code %>
+
+  <div class="relative rounded-xl overflow-auto">
+    <div class="shadow-sm overflow-hidden my-8">
+      <table class="border-collapse table-auto w-full text-sm">
+        <thead>
+          <tr>
+            <th class="border-b dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left">key</th>
+            <th class="border-b dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left">EN</th>
+            <th class="border-b dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left">TH</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= render partial: "tables/key", collection: @table.keys %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
